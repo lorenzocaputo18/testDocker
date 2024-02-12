@@ -33,15 +33,7 @@ services:
       - ./build/libs/smartcitywastemanagement-0.0.1-SNAPSHOT.jar:/app/app.jar
     working_dir: /app
     entrypoint: java -jar /app/app.jar
-  frontend:
-    build: .
-    ports:
-      - 4200:4200
-    links:
-      - backend:back_host
-    volumes:
-      - "/app/node_modules"
-      - ".:/app"
+
 
 
 volumes:
